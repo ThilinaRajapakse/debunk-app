@@ -35,3 +35,20 @@
     transform: rotate(360deg);
   }
 }
+
+html, body, #reactapp, .App {
+  height: 100%;
+  width: 100%;
+}
+.App {
+ display: flex;
+}
+
+.no-padding {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.spacer {
+  height: 20px;
+}
