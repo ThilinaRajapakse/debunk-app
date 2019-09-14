@@ -1,0 +1,56 @@
+import React, { useState, useContext, useCallback } from 'react'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
+
+
+import {ResultsContext} from '../../contexts/ResultsContext'
+
+function FormContainer(props) {
+    const [results, setResults] = useContext(ResultsContext);
+    const [sentence, setSentence] = useState("");
+    const [isSending, setIsSending] = useState(false)
+
+    const handleSubmit = useCallback(async (evt) => {
+        evt.preventDefault();
+        // don't send again while we are sending
+        if (isSending) return
+        // update state
+        setIsSending(true)
+        // send the actual request
+        // const response = await fetch('http://34.67.114.157:8000/predict', {
+        //     method: 'POST',
+        //     body: JSON.stringify({"sentence": "Testing jsowefwefewrfwfefn"}),
+        //     headers: {
+        //     "Content-type": "application/json; charset=UTF-8",
+            
+        //     }
+        // });
+        // const result = await response.json();
+        // console.log(result)
+        // once the request is sent, update state again
+        setIsSending(false)
+        const result = JSON.parse('{ "pseudoscience" : "true", "probability": "0.9" }')
+
+        const prediction = result.pseudoscience
+        const item = {
+            index: results.length,
+            text:sentence, 
+            result:prediction
+        }
+
+        setResults(results => [...results, item])
+        console.log(results)
+      }, [isSending, results, setResults, sentence]);
+
+    return (
+        <Form onSubmit={handleSubmit} className={''}>
+            <Form.Group>
+                <Form.Label>Enter text to be checked for pseudoscience:</Form.Label>
+                <Form.Control as="textarea" rows="10" className={"transparent-textarea"} onChange={e => setSentence(e.target.value)}></Form.Control>
+            </Form.Group>
+            <Button variant="outline-light button" type="submit">Submit</Button>
+        </Form>
+    );
+}
+
+export default FormContainer;

@@ -1,0 +1,47 @@
+.vh-full {
+    height: calc(100vh - 80px);
+}
+
+.dark-background-transparent {
+    background: rgba(0, 0, 0, 0.3)
+    
+}
+
+.button:hover {
+    background: rgb(75, 75, 75);
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.no-padding {
+    padding: 0px;
+}
+
+.fix-padding {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.pixel-margin {
+    margin: 1px !important;
+}
+
+.transparent-background {
+    background: transparent;
+}
+
+.white-text {
+    color: aliceblue;
+}
+
+.transparent-textarea {
+    color: aliceblue;
+    background: transparent;
+    /* border-style: solid;
+    outline: 2px white; */
+}
+
+.transparent-textarea:focus {
+    color: aliceblue;
+    background: rgba(0, 0, 0, 0.5);
+}

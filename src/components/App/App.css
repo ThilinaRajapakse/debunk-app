@@ -1,9 +1,9 @@
-.App {
-  text-align: center;
+.root {
+  background-color: #282c34
 }
 
-.toast {
-  margin: 0 auto;
+.App {
+  text-align: center;
 }
 
 .App-logo {
@@ -51,4 +51,10 @@ html, body, #reactapp, .App {
 
 .spacer {
   height: 20px;
+}
+
+.pin-top {
+  position: fixed;
+  top: 15px;
+  width: 100%;
 }
