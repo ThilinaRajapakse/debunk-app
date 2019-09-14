@@ -54,7 +54,19 @@ html, body, #reactapp, .App {
 }
 
 .pin-top {
+  background: rgba(0, 0, 0, 0.5);
   position: fixed;
-  top: 15px;
+  /* padding-top: 1rem;
+  padding-bottom: 1rem; */
   width: 100%;
+  z-index: 10000;
+  display: flex;
+}
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding-top: 6rem;
 }

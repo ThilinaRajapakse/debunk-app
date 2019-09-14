@@ -3,13 +3,16 @@
 }
 
 .dark-background-transparent {
-    background: rgba(0, 0, 0, 0.3)
+    background: rgba(0, 0, 0, 0.8)
     
 }
 
+.button {
+    text-decoration: none !important;
+}
+
 .button:hover {
-    background: rgb(75, 75, 75);
-    color: aliceblue;
+    color: rgb(175, 175, 175);
     cursor: pointer;
 }
 
@@ -19,6 +22,10 @@
 
 .fix-padding {
     padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.pad-bottom {
     padding-bottom: 25px;
 }
 

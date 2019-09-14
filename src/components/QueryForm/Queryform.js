@@ -24,11 +24,11 @@ function QueryForm(props) {
     return (
         <Accordion className={'transparent-background'}>
             <Card className={'transparent-background'}>
-                <Accordion.Toggle as={Card.Header} className={'title-text border border-light pixel-margin text-center button'} eventKey="0">
+                <Accordion.Toggle as={Button} variant={"link"} className={'title-text pixel-margin text-center button'} eventKey="0">
                     Pseudoscience Test
                 </Accordion.Toggle>
-                <Accordion.Collapse eventKey="0">
-                    <Card.Body className={'no-padding dark-background-transparent border border-light'}>
+                <Accordion.Collapse eventKey="0" className={"pad-bottom"}>
+                    <Card.Body className={'no-padding'}>
                         <Jumbotron className={'white-text transparent-background pixel-margin fix-padding'}>
                             <FormContainer></FormContainer>
                         </Jumbotron>
