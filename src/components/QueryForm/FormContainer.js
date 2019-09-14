@@ -17,25 +17,26 @@ function FormContainer(props) {
         // update state
         setIsSending(true)
         // send the actual request
-        // const response = await fetch('http://34.67.114.157:8000/predict', {
-        //     method: 'POST',
-        //     body: JSON.stringify({"sentence": "Testing jsowefwefewrfwfefn"}),
-        //     headers: {
-        //     "Content-type": "application/json; charset=UTF-8",
+        const response = await fetch('http://localhost:5000/predict', {
+            method: 'POST',
+            body: JSON.stringify({"sentence": {sentence}}),
+            headers: {
+            "Content-type": "application/json; charset=UTF-8",
             
-        //     }
-        // });
-        // const result = await response.json();
-        // console.log(result)
+            }
+        });
+        const result = await response.json();
+        console.log(result)
         // once the request is sent, update state again
         setIsSending(false)
-        const result = JSON.parse('{ "pseudoscience" : "true", "probability": "0.9" }')
+        // const result = JSON.parse('{ "pseudoscience" : "true", "probability": "0.9" }')
 
         const prediction = result.pseudoscience
         const item = {
             index: results.length,
             text:sentence, 
-            result:prediction
+            result:prediction,
+            probability:result.probability
         }
 
         setResults(results => [...results, item])
