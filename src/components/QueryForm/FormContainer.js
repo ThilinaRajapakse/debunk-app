@@ -17,7 +17,7 @@ function FormContainer(props) {
         // update state
         setIsSending(true)
         // send the actual request
-        const response = await fetch('http://localhost:5000/predict', {
+        const response = await fetch('http://35.247.47.204/api/predict', {
             method: 'POST',
             body: JSON.stringify({"sentence": {sentence}}),
             headers: {
