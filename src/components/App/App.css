@@ -55,12 +55,22 @@ html, body, #reactapp, .App {
 
 .pin-top {
   background: rgba(0, 0, 0, 0.5);
-  position: fixed;
   /* padding-top: 1rem;
   padding-bottom: 1rem; */
-  width: 100%;
   z-index: 10000;
   display: flex;
+}
+
+@media only screen and (min-width: 600px) {
+  .pin-top {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    /* padding-top: 1rem;
+    padding-bottom: 1rem; */
+    width: 100%;
+    z-index: 10000;
+    display: flex;
+  }
 }
 
 .page {
@@ -69,4 +79,27 @@ html, body, #reactapp, .App {
   justify-content: center;
   height: 100vh;
   padding-top: 6rem;
+}
+
+.nav-text {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+}
+
+.overlay-text {
+  font-weight: 800;
+}
+
+.overlay-image {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
 }

@@ -8,7 +8,8 @@ export function VerticalFadeIn(props) {
             <Wave 
                 text={props.text} 
                 effect="verticalFadeIn" 
-                effectChange={2} 
+                effectDuration={0.0001} 
+                effectChange={1}
                 effectDirection="up" 
                 iterations={1}
             ></Wave>

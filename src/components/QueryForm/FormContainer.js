@@ -17,7 +17,7 @@ function FormContainer(props) {
         // update state
         setIsSending(true)
         // send the actual request
-        const response = await fetch('http://35.247.47.204/api/predict', {
+        const response = await fetch('http://0.0.0.0:5000/api/predict', {
             method: 'POST',
             body: JSON.stringify({"sentence": {sentence}}),
             headers: {
@@ -47,7 +47,7 @@ function FormContainer(props) {
         <Form onSubmit={handleSubmit} className={''}>
             <Form.Group>
                 <Form.Label>Enter text to be checked for pseudoscience:</Form.Label>
-                <Form.Control as="textarea" rows="10" className={"transparent-textarea"} onChange={e => setSentence(e.target.value)}></Form.Control>
+                <Form.Control as="textarea" rows="20" className={"transparent-textarea"} onChange={e => setSentence(e.target.value)}></Form.Control>
             </Form.Group>
             <Button variant="outline-light button" type="submit">Submit</Button>
         </Form>

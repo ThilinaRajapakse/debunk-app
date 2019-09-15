@@ -24,7 +24,7 @@ function QueryForm(props) {
     return (
         <Accordion className={'transparent-background'}>
             <Card className={'transparent-background'}>
-                <Accordion.Toggle as={Button} variant={"link"} className={'title-text pixel-margin text-center button'} eventKey="0">
+                <Accordion.Toggle as={Button} variant={"link"} className={'nav-text pixel-margin text-center button'} eventKey="0">
                     Pseudoscience Test
                 </Accordion.Toggle>
                 <Accordion.Collapse eventKey="0" className={"pad-bottom"}>
