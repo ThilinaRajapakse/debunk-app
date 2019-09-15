@@ -8,7 +8,6 @@ import BackgroundSlider from 'react-background-slider'
 // import Navbar from '../Navbar/Navbar'
 import QueryForm from '../QueryForm/Queryform'
 import Predictions from '../Predictions/Predictions'
-import { VerticalFadeIn } from '../Homepage/AnimatedText/VerticalFadeIn'
 
 import {ResultsContext} from '../../contexts/ResultsContext'
 
@@ -40,7 +39,7 @@ const App = () => {
       </Row>
 
       <Row className={"page"} >
-        <Col md={12}><h1 className={"text-center title-text overlay-text"}><VerticalFadeIn text="What is the cost of lies?"></VerticalFadeIn></h1></Col>
+        <Col md={12}><h1 className={"text-center title-text overlay-text"}>What is the cost of lies?</h1></Col>
       </Row>
 
       <BackgroundSlider
