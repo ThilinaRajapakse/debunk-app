@@ -10,6 +10,9 @@ function FormContainer(props) {
     const [sentence, setSentence] = useState("");
     const [isSending, setIsSending] = useState(false)
 
+    // const api_endpoint = "http://localhost:5000/api/predict"
+    const api_endpoint = "http://35.247.47.204/api/predict"
+
     const handleSubmit = useCallback(async (evt) => {
         evt.preventDefault();
         // don't send again while we are sending
@@ -17,12 +20,11 @@ function FormContainer(props) {
         // update state
         setIsSending(true)
         // send the actual request
-        const response = await fetch('http://0.0.0.0:5000/api/predict', {
+        const response = await fetch(api_endpoint, {
             method: 'POST',
             body: JSON.stringify({"sentence": {sentence}}),
             headers: {
             "Content-type": "application/json; charset=UTF-8",
-            
             }
         });
         const result = await response.json();
