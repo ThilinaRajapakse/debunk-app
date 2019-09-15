@@ -38,8 +38,8 @@ const App = () => {
         </Col>
       </Row>
 
-      <Row className={"page"} >
-        <Col md={12}><h1 className={"text-center title-text overlay-text"}>What is the cost of lies?</h1></Col>
+      <Row className={"page justify-content-center"} >
+        <Col md={3}><h1 className={"text-center title-text overlay-text"}>What is the cost of lies?</h1></Col>
       </Row>
 
       <BackgroundSlider

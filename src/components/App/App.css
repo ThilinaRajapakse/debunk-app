@@ -54,7 +54,7 @@ html, body, #reactapp, .App {
 }
 
 .pin-top {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   /* padding-top: 1rem;
   padding-bottom: 1rem; */
   z-index: 10000;
@@ -63,7 +63,7 @@ html, body, #reactapp, .App {
 
 @media only screen and (min-width: 600px) {
   .pin-top {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
     position: fixed;
     /* padding-top: 1rem;
     padding-bottom: 1rem; */
@@ -88,6 +88,9 @@ html, body, #reactapp, .App {
 
 .overlay-text {
   font-weight: 800;
+  background-color: rgba(0,0,0,0.5);
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .overlay-image {
