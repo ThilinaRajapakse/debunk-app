@@ -11,7 +11,7 @@ function FormContainer(props) {
     const [isSending, setIsSending] = useState(false)
 
     // const api_endpoint = "http://localhost:5000/api/predict"
-    const api_endpoint = "http://35.247.47.204/api/predict"
+    const api_endpoint = "https://debunk.io/api/predict"
 
     const handleSubmit = useCallback(async (evt) => {
         evt.preventDefault();
