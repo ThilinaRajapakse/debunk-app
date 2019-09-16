@@ -49,7 +49,7 @@ function FormContainer(props) {
         <Form onSubmit={handleSubmit} className={''}>
             <Form.Group>
                 <Form.Label>Enter text to be checked for pseudoscience:</Form.Label>
-                <Form.Control as="textarea" rows="20" className={"transparent-textarea"} onChange={e => setSentence(e.target.value)}></Form.Control>
+                <Form.Control as="textarea" rows="21" className={"transparent-textarea max-height-textarea"} onChange={e => setSentence(e.target.value)}></Form.Control>
             </Form.Group>
             <Button variant="outline-light button" type="submit">Submit</Button>
         </Form>

@@ -54,23 +54,7 @@ html, body, #reactapp, .App {
 }
 
 .pin-top {
-  background: rgba(0, 0, 0, 0.7);
-  /* padding-top: 1rem;
-  padding-bottom: 1rem; */
-  z-index: 10000;
-  display: flex;
-}
-
-@media only screen and (min-width: 600px) {
-  .pin-top {
-    background: rgba(0, 0, 0, 0.7);
-    position: fixed;
-    /* padding-top: 1rem;
-    padding-bottom: 1rem; */
-    width: 100%;
-    z-index: 10000;
-    display: flex;
-  }
+  position: fixed;
 }
 
 .page {
@@ -107,3 +91,19 @@ html, body, #reactapp, .App {
   z-index: 2;
   cursor: pointer;
 }
+
+.navbar-fix-overflow {
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+.navbar-background {
+  background-color: rgba(0,0,0,0.75) !important;
+}
+
+/* @media screen and (min-width: 768px) {
+  .navbar-fix-overflow {
+    max-height: unset;
+    overflow: visible;
+  }
+} */

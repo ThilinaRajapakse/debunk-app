@@ -29,7 +29,7 @@ export default function Predictions(props) {
     return (
         <Accordion className={'transparent-background'}>
             <Card className={'transparent-background'}>
-                <Accordion.Toggle as={Button} variant="link" className={'nav-text pixel-margin text-center button'} eventKey="predictions">
+                <Accordion.Toggle as={Card.Header} variant="link" className={'nav-text pixel-margin text-center button'} eventKey="predictions">
                     Test History ({results.length})
                 </Accordion.Toggle>
                 <Accordion.Collapse eventKey="predictions" className={"pad-bottom"}>

@@ -48,7 +48,17 @@
     outline: 2px white; */
 }
 
+.max-height-textarea {
+    max-height: 70vw;
+    overflow: scroll;
+}
+
+
 .transparent-textarea:focus {
     color: aliceblue;
     background: rgba(0, 0, 0, 0.5);
+}
+
+.min-quarter-width {
+    min-width: 30vw;
 }
