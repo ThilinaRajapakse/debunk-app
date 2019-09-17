@@ -16,6 +16,7 @@ import image1 from '../../assets/image1.jpg'
 import image2 from '../../assets/image2.jpg'
 import image3 from '../../assets/image3.jpg'
 
+import brand from '../../assets/debunk.png'
 
 import "./App.css";
 
@@ -27,6 +28,15 @@ const App = () => {
     <Container fluid={'true'}>
       <Navbar collapseOnSelect expand="md" bg="dark" variant="dark" fixed="top" className={"navbar-fix-overflow navbar-background"}>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        {/* <Navbar.Brand href="#home">
+          <img
+            alt=""
+            src={brand}
+            width="80"
+            height="80"
+            className="d-inline-block align-top"
+          />
+        </Navbar.Brand> */}
         <Navbar.Collapse>
           <Col md={6}>
           <ResultsContext.Provider value={[results, setResults]}>
