@@ -12,8 +12,8 @@ function FormContainer(props) {
     const [isSending, setIsSending] = useState(false)
     const [choice, setChoice] = useState("neutral")
 
-    const api_endpoint = "http://localhost:7000/api/predict"
-    // const api_endpoint = "https://debunk.io/api/predict"
+    // const api_endpoint = "http://localhost:5000/api/predict"
+    const api_endpoint = "https://debunk.io/api/predict"
 
     const handleSubmit = useCallback(async (evt) => {
         evt.preventDefault();
