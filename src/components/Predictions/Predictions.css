@@ -2,3 +2,11 @@
     max-height: 60vh;
     overflow-y: auto;
 }
+
+.pseudo-text {
+    color: rgb(255, 0, 0);
+}
+
+.non-pseudo-text {
+    color: rgb(0, 205, 0);
+}

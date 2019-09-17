@@ -14,9 +14,16 @@ export default function PredictionFragment(props) {
         <React.Fragment>
             {results.map(item => (
                 <React.Fragment key={item.index.toString() + 'fragment'}>
-                    <Accordion.Toggle as={Card.Header} className={'border-bottom border-light'} key={item.index.toString() + 'head'} eventKey={'prediction_' + item.index}>
-                        {item.index + 1} - {item.result}
-                    </Accordion.Toggle>
+                    {item.probability > 0.5 &&
+                        <Accordion.Toggle as={Card.Header} className={'border-bottom border-light pseudo-text text-center button'} key={item.index.toString() + 'head'} eventKey={'prediction_' + item.index}>
+                            {item.index + 1} - {item.result}
+                        </Accordion.Toggle>
+                    }
+                    {item.probability <= 0.5 &&
+                        <Accordion.Toggle as={Card.Header} className={'border-bottom border-light non-pseudo-text text-center button'} key={item.index.toString() + 'head'} eventKey={'prediction_' + item.index}>
+                            {item.index + 1} - {item.result}
+                        </Accordion.Toggle>
+                    }
                     <Accordion.Collapse key={item.index.toString() + 'body'} eventKey={'prediction_' + item.index} className={"fix-accordion-height"}>
                         <Card.Body className={'border-bottom border-light'}>
                             <Jumbotron className={'white-text transparent-background no-margin fix-padding'}>

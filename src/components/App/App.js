@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Navbar from 'react-bootstrap/Navbar'
 import BackgroundSlider from 'react-background-slider'
+import Toast from 'react-bootstrap/Toast'
 
 // import Navbar from '../Navbar/Navbar'
 import QueryForm from '../QueryForm/Queryform'
@@ -19,10 +20,15 @@ import image3 from '../../assets/image3.jpg'
 import brand from '../../assets/debunk.png'
 
 import "./App.css";
+import { SendingContext } from '../../contexts/SendingContext';
 
 
 const App = () => {
   const [results, setResults] = useState([]);
+  const [showReady, setShowReady] = useState(false);
+  const [isSending, setIsSending] = useState(false);
+  const [showSending, setShowSending] = useState(false);
+
 
   return (
     <Container fluid={'true'}>
@@ -39,7 +45,7 @@ const App = () => {
         </Navbar.Brand> */}
         <Navbar.Collapse>
           <Col md={6}>
-          <ResultsContext.Provider value={[results, setResults]}>
+          <ResultsContext.Provider value={[results, setResults, isSending, setIsSending, setShowSending]}>
             <QueryForm id="check-form"></QueryForm>
           </ResultsContext.Provider>
           </Col>
@@ -54,7 +60,6 @@ const App = () => {
       <Row className={"page justify-content-center"} >
         <Col md={3}><h1 className={"text-center title-text overlay-text"}>What is the cost of lies?</h1></Col>
       </Row>
-
       <BackgroundSlider
         images={[image1, image2, image3]}
         duration={8}
