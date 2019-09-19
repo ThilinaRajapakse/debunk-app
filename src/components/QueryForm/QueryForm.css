@@ -49,8 +49,8 @@
 }
 
 .max-height-textarea {
-    max-height: 70vw;
-    overflow: scroll;
+    max-height: 35vh;
+    overflow: auto;
 }
 
 
